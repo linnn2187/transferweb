@@ -1,11 +1,9 @@
 # ignore the folder
 node_modules
 config
-public/ckeditor
+public/**
+!public/css
+!public/js
 
 # ignore the file
 readme.html
-public/pdf/**/*.pdf
-public/**/*.jpg
-public/**/*.png
-public/**/*.pdf
