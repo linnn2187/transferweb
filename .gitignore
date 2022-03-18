@@ -1,0 +1,11 @@
+# ignore the folder
+node_modules
+config
+public/pdf/**/*.pdf
+public/**/*.jpg
+public/**/*.png
+public/**/*.pdf
+
+
+# ignore the file
+readme.html

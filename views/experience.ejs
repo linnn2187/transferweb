@@ -1,0 +1,42 @@
+<!-- 心得分享 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/experience.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/experience.js"></script>
+<section class="jumbotron text-center">
+    <div><a href="/addExperience" class="btn btn-success float-right" id="addButton">點我新增文章</a></div><br>
+    <!-- 標題區塊 -->
+    <div class="container">
+        <h1><%= title %></h1>        
+    </div>
+    <!-- 搜尋考試學期區塊 -->
+    <div>
+        <form action="/experience" method="post">      
+            <span>                                
+                <select class="postterm" name="postterm">
+                    <option value="all">all</option>
+                    <option value="1091">1091</option>
+                    <option value="1082">1082</option>
+                    <option value="1081">1081</option>
+                </select>
+                <input type="submit" value="搜尋考試學期" id="searchterm"><br>
+            </span>        
+        </form>
+        <!-- 顯示上傳者們的心得區塊 -->
+        <% for ( var i = 0 ; i < data.length ; i++){ %>
+            <div class="box">
+                <img src="/img/talking.png" id="talking">                   
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= data[i].TITLE %></h4>
+                        <div class="card-subtitle text-muted mb-2" id="author"><%= data[i].AUTHOR %></div>
+                        <div class="card-text mb-2" id="testdate">考試學期:<%= data[i].TERM %></div>
+                        <div id="content"><%- data[i].EXPERIENCE %></div>
+                    </div>
+                </div>            
+            </div>
+        <% } %>
+    </div>    
+</section>
+<!-- // 心得分享 -->

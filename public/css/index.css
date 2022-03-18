@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+}
+
+table thead, table tbody{
+    font-size: 20px;    
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #7EA8F8;
+    border-style: ridge;
+    color: #000000;
+  }
+  
+table thead td, table thead th, table tbody td, table tbody th {
+    border-width: 1px;
+    border-color: #7EA8F8;
+    border-style: ridge;
+    padding: 5px;
+}
+  
+table thead {
+    background-color: #BAE5F8;
+}
+
+table tfoot {
+    font-style: italic;
+    font-size: 18px;
+    vertical-align: text-top;
+}
+
+#union {
+    text-align: left;
+}
+
+#intro {
+    text-align: center;
+    border: 4px rgb(191, 209, 241) double; 
+    border-radius: 10px;
+    font-size: 25px;
+    background: #f2f9fe; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f9fe 0%, #d6f0fd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f2f9fe 0%,#d6f0fd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f2f9fe 0%,#d6f0fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+p {
+    text-align: left;
+}
+
+mark.yellow {
+	background: linear-gradient(transparent 50%, #FFF176 80%,transparent 90%);	
+    padding: 2px 1px;
+}

@@ -1,0 +1,20 @@
+#title{
+    width: 60%;
+    display: inline;
+}
+
+#author{
+    width: 350px;
+    height: 35px;
+    border: 1px solid rgb(171, 171, 185);
+    border-radius: 5px;
+}
+
+label{
+    font-size: 20px;
+}
+
+select, option{
+    font-size: 20px;
+    border-radius: 5px;
+}

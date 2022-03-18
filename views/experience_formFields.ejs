@@ -1,0 +1,34 @@
+<!-- 新增心得form -->
+<link rel="stylesheet" href="/css/experience_formFields.css">
+<script src="/ckeditor/ckeditor.js"></script>
+<div class="form-group">
+  <label for="title">文章標題:</label>
+  <input required type="text" name="title" id="title" class="form-control">
+</div>
+<div class="form-group">
+  <label for="author">您的暱稱:</label>
+  <input type="text" name = "author" id="author" >
+</div>
+<div class="form-group">
+  <label for="term">報考學期:</label>
+  <span class="value"> 
+    <select name="term" >
+      <option value="1091">1091</option>
+      <option value="1082">1082</option>
+      <option value="1081">1081</option>
+    </select>
+  </span>
+</div>
+<div class="form-group"></div>
+  <label for="experience">心得分享</label>
+  <textarea name="experience" id="experience" class="form-control"></textarea>
+  <!-- 載入文字編輯器 -->
+  <script>
+    CKEDITOR.replace('experience', {
+    });
+</script>
+</div><br>
+<!-- 上傳或取消 -->
+<button type="submit" class="btn btn-primary">上傳</button>
+<a href="/experience" class="btn btn-secondary">取消</a>
+<!-- // 新增心得form -->

@@ -1,0 +1,20 @@
+<!-- 管理者登入 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/admin.css">
+<section class="jumbotron text-center">
+    <!-- 標題區塊 -->
+    <div class="container">
+        <br><h1><%= title %></h1>
+	</div>    .
+	<!-- 輸入帳號密碼區塊 -->
+	<div class="loginForm">
+		<form action="admin" method="POST">
+			<input type="text" name="adminName" id="adminName" placeholder="管理者帳號" required>
+			<input type="password" name="adminPwd" id="adminPwd" placeholder="管理者密碼" required>
+			<input type="submit" value="登入" id="submit">
+		</form>
+	</div>
+	
+</section>
+<!-- // 管理者登入 -->

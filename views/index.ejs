@@ -1,0 +1,98 @@
+<!-- 首頁 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/index.css">
+<section class="jumbotron text-center">
+    <!-- 標題區塊 -->
+    <div class="container">
+        <br><h1><%= title %></h1>
+    </div>
+    <!-- intro -->
+    <div class="container" id="intro">
+        <span>
+            學測、指考、統測失利??<br>
+            選的科系不符合自己的興趣?? <img src="/img/interest.png"><br>
+            不喜歡現在的大學環境??<br>
+            不管你各式各樣的原因，如果想要轉學，這裡都幫你整理好了。<br>
+            讓你一分鐘內了解何謂轉學考<br>
+            還有各校的資訊、學長姐轉學心得分享<br>
+            遇到不會解的題目，丟上來就有路過的神人幫你解決，也有學長姊的備審資料給你參考。<br>
+            你想要的轉學考資訊<br>
+            在這裡 <img src="/img/info.png"><br>
+            通通都有<br>
+            沒有補習班的營利、不會推銷你任何課程、省去自己找資料的麻煩<br>
+            提供你一個平台<br>
+            <img src="/img/success.png"> 讓你的轉學順利上榜!
+        </span>
+    </div>
+    <!-- 轉學考比較 -->
+    <div class="container">
+        <br><h4>寒轉vs暑轉</h4>
+        <p><img src="/img/alarm.png"> 只有大一上的成績不能轉學!</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="2">寒轉</th>
+                    <th colspan="2">暑轉</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>報名時間</td>
+                    <td colspan="2">11-12月</td>
+                    <td colspan="2">5-6月</td>
+                  </tr>
+                  <tr>
+                    <td>考試時間</td>
+                    <td colspan="2">11-1月</td>
+                    <td colspan="2">6-8月</td>
+                  </tr>
+                  <tr>
+                    <td>考試方式</td>
+                    <td colspan="2">大多為<mark class="yellow">書審+面試</mark></td>
+                    <td colspan="2">大多為<mark class="yellow">筆試</mark></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">考試資格</td>
+                    <td>三學期成績證明</td>
+                    <td>五學期成績證明</td>
+                    <td>兩學期成績證明</td>
+                    <td>四學期成績證明</td>
+                  </tr>
+                  <tr>
+                    <td>轉入大二下</td>
+                    <td>轉入大二下或大三下</td>
+                    <td>轉入大二上</td>
+                    <td>轉入大二/大三上</td>
+                  </tr>
+                  <tr>
+                    <td>招生方式</td>
+                    <td colspan="2">獨立招生</td>
+                    <td colspan="2">獨立招生+聯合招生</td>
+                  </tr>    
+                  <tr>
+                    <td>考試科目</td>
+                    <td colspan="4">若為筆試，考試科目最多四科，分別為<mark class="yellow">國+英+專業科目*2</mark>。<br>少數大學考五科，依各校簡章規定。</td>
+                </tr>  
+                  <tr>
+                      <td>注意事項</td>
+                      <td colspan="2">部分大學寒轉僅開放大二轉學(ex：清大)<br>若是繳交書審的校系，報名與繳交書審時間相同。</td>
+                      <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                      <td>備註</td>
+                      <td colspan="4">少數校系大三轉學考有限制相關科系報考<br>少數大學操行不及格不得報考，各大學不一，詳情依當年度簡章為主</td>
+                  </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                  <td>聯合招生系統</td>
+                  <td colspan="4" id="union">台綜大: 成功大學、中山大學、中正大學、中興大學<br>台聯大: 中央大學、清華大學、交通大學、陽明大學<br>私醫聯招: 台北醫學大學、中山醫學大學、中國醫藥大學、高雄醫學大學、長庚大學、慈濟大學<br></td>
+                </tr>
+              </tfoot>            
+          </table><br> 
+    </div>    
+</section>
+<!-- // 首頁 -->

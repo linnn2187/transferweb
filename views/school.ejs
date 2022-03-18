@@ -1,0 +1,64 @@
+<!-- 各校資訊 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/school.css">
+<script src="/js/school.js"></script>
+<section class="jumbotron text-center">
+    <div class="container-fluid">
+        <!-- 標題 -->
+        <br><h1><%= title %></h1>
+
+        <!-- 搜尋學校及學期 -->
+        <form action="/school" method="post">      
+            <span>                                
+                <select class="term" name="term">
+                    <option value="1092">1092</option>
+                    <option value="1091">1091</option>
+                </select>
+                <input type="submit" value="搜尋學期" id="searchterm"><br>
+                <input type="text" id="searchSchool" onkeyup="searchSch()" placeholder="搜尋學校">
+            </span>        
+        </form>
+
+        <!-- 顯示各校資訊 -->
+        <div class="table-wrapper">
+            <table id = "schoolTable">
+                <tr>
+                    <th>編號</th>
+                    <th>學校</th>
+                    <th onclick="sortTable(2)">報名日期<img src="/img/sort.png"></th>
+                    <th onclick="sortTable(3)">考試日期<img src="/img/sort.png"></th>
+                    <th onclick="sortTable(4)">放榜日期<img src="/img/sort.png"></th>
+                    <th>簡章</th>
+                    <th>備註</th>
+                </tr>
+                <% for ( var i = 0 ; i < data.length ; i++){ %>
+                    <tr>
+                        <td>
+                            <%= data[i].ID  %>
+                        </td>
+                        <td>
+                            <%= data[i].NAME  %>
+                        </td>
+                        <td>
+                            <%= data[i].REGISTRATION_DATE  %>
+                        </td>
+                        <td>
+                            <%= data[i].TEST_DATE  %>
+                        </td>
+                        <td>
+                            <%= data[i].RESULT_DATE  %>
+                        </td>
+                        <td>
+                            <a href="<%= data[i].REGULATION  %>">簡章連結</a>                            
+                        </td>
+                        <td>
+                            <%= data[i].REMARK  %>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- // 各校資訊 -->

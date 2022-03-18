@@ -1,0 +1,47 @@
+<!-- 解題區 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/solution.css">
+<section class="jumbotron text-center">
+    <div><a href="/addSolution" class="btn btn-success float-right" id="addQuestion">點我新增問題</a></div><br>
+    <!-- 標題區塊 -->
+    <div class="container">
+        <h1><%= title %></h1>
+    </div>
+    <!-- 搜尋科目 -->
+    <div>
+        <form action="/solution" method="post">      
+            <span>                                
+                <select class="subject" name="subject">
+                    <option value="all">all</option>
+                    <option value="國文">國文</option>
+                    <option value="英文">英文</option>
+                    <option value="微積分">微積分</option>
+                    <option value="普物">普物</option>
+                    <option value="化學">化學</option>
+                    <option value="計概">計概</option>
+                    <option value="生物">生物</option>
+                    <option value="經濟">經濟</option>
+                    <option value="法律">法律</option>
+                </select>
+                <input type="submit" value="搜尋科目" id="searchsubject"><br>
+            </span>        
+        </form>
+    </div>
+    <!-- 顯示上傳者們的問題 -->
+    <% for ( var i = 0 ; i < data.length ; i++){ %>
+        <div class="container">                   
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title"><%= data[i].TITLE %>
+                        <p class="card-subtitle text-muted mb-2" id="subject"><%= data[i].SUBJECT %></p>
+                    </div>                    
+                    <div class="card-text mb-2" id="author"><%= data[i].AUTHOR %></div>                    
+                    <p id="question"><%- data[i].QUESTION %></p>
+                    <a href="/solution/<%= data[i].ID%>" class="btn btn-success float-right" id="addAnswer">我來解答</a>
+                </div>
+            </div>            
+        </div>
+    <% } %>
+</section>
+<!-- // 解題區 -->

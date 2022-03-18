@@ -1,0 +1,59 @@
+.table-wrapper {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.table-wrapper th {
+    position: sticky;
+    top: 0;
+}
+
+table {
+    font-family: "Microsoft JhengHei";
+    font-size:large;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+table td, table th {
+    border: 2px solid #7995b9;
+    color: #555;
+    height: 30px;
+}
+
+table tr th {
+    font-size:x-large;
+    background: #F5FAFA;
+}
+
+#searchSchool {
+    background-image: url('../img/search.png');
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: 12px 20px 8px 45px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.term {
+    width: 120px;
+    height: 30px;
+    border: 2px solid #999;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#searchterm {
+    width: 80px;
+    height: 30px;
+    border: 2px solid #999;
+    font-size: 16px;
+    background-color: #eee;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}

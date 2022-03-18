@@ -1,0 +1,60 @@
+.box {
+    width: 30%;
+    margin: 50px 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgpa(0,0,0,0.15);
+    display: inline-block;
+}
+
+#content {
+    height: 400px;
+    overflow: scroll;
+}
+
+.postterm {
+    width: 120px;
+    height: 30px;
+    border: 2px solid rgb(155, 166, 216);
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#searchterm {
+    width: 120px;
+    height: 30px;
+    border: 2px solid rgb(155, 166, 216);
+    font-size: 16px;
+    background-color: #eee;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+#addButton {
+    background-color: #008CBA;
+    width:120px;
+    height:38px;
+    border:2px;
+    position:relative;
+    top:50px;
+    right:300px;
+    text-align: center;
+}
+
+#author {
+    text-align: right;
+    font-style: italic;
+}
+
+#testdate {
+    text-align: right;
+    text-decoration:underline;
+}
+
+#talking {
+    display: block;
+    margin-right: auto;
+}

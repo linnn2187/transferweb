@@ -1,0 +1,20 @@
+<!-- 新增問題 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/addSolution.css">
+<section class="jumbotron text-center">
+    <!-- 標題區塊 -->
+    <div class="container">
+        <h1><%= title %></h1>
+    </div>
+    <!-- 新增問題區塊 -->
+    <div class="container">
+        <h4 class="mb-4" id="addQ">新增問題</h4>    
+        <form method="POST", action="/addSolution" enctype="multipart/form-data">
+          <div class="shadowbox">
+          <!-- 使用填寫問題模板 -->                
+          <%- include solution_formFields.ejs %>
+        </form>
+      </div>
+</section>
+<!-- // 新增問題 -->

@@ -1,0 +1,19 @@
+<!-- 新增心得分享 -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/addExperience.css">
+<section class="jumbotron text-center">
+    <!-- 標題區塊 -->
+    <div class="container">
+        <h1><%= title %></h1>
+    </div>
+    <!-- 新增心得區塊 -->
+    <div class="container">
+        <h3 class="mb-4" id="addArticle">新增文章</h3>    
+        <form action="addExperience" method="POST">
+          <!-- 使用填寫心得表模板 -->
+          <%- include experience_formFields.ejs %>
+        </form>
+      </div>
+</section>
+<!-- // 新增心得分享 -->

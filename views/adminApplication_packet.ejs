@@ -1,0 +1,70 @@
+<!-- 書審分享區(管理者) -->
+<!-- 使用layout模板 -->
+<% layout('layout') %>
+<link rel="stylesheet" href="/css/application_packet.css">
+<section class="jumbotron text-center">
+    <!-- 標題區塊 -->
+    <div class="container">
+        <br><h1><%= title %></h1><br>
+    </div>
+    <!-- 備審分享繳交處區塊 -->
+    <div class="container-fluid">                
+        <form method="POST", action="/application_packet" enctype="multipart/form-data">
+            <div class="shadowbox">                
+                <p id="share"><img src="/img/application.png">&nbsp;備審分享繳交處&nbsp;</p>
+                <span>
+                    <label>學期</label>
+                    <select class="term" name="term">
+                        <option>1091</option>
+                        <option>1082</option>
+                        <option>1081</option>
+                    </select>
+                </span>
+                <span>
+                    <label>名次</label>
+                    <select class="ranking1" name="ranking1">
+                        <option>正取</option>
+                        <option>備取</option>
+                    </select>
+                
+                    <select class="ranking2" name="ranking2">
+                        <% for ( var i = 1 ; i < 100 ; i++){ %>
+                            <option><%= i %></option>
+                        <% } %>
+                    </select>
+                </span>
+                <span>            
+                    <label>學校</label>
+                    <select class="school" name="school">
+                        <% for ( var i = 0 ; i < school.length ; i++){ %>
+                            <option><%= school[i].NAME %></option>
+                        <% } %>
+                    </select>
+                </span>
+                <span>
+                    <label>科系</label>
+                    <input type="text" name="major" id="major" placeholder="例:資訊管理系">
+                </span>
+                <input type="file" name="file">
+                <input type="submit" value="提交" id="submit">
+            </div>
+        </form>
+    </div>
+    <!-- 顯示上傳者們的資訊及備審連結 -->
+    <div>
+        <% for ( var i = 0; i < data.length; i++){ %>
+            <div class="box">                   
+                <div class="card mt-4">
+                    <a class="btn btn-danger delete" onclick="return alert('Are You sure?')" href="/adminApplication_packet/<%=data[i].ID%>">刪除</a>
+                    <div class="card-body">
+                        <div class="card-text mb-2" id="selectSchool"><%= data[i].SCHOOL %>-<%= data[i].MAJOR %></div>
+                        <div class="card-text mb-2" id="selectTerm">錄取學期:<%= data[i].TERM %></div>
+                        <div class="card-text mb-2" id="selectRanking">名次:<%= data[i].RANKING %></div>
+                        <a href="<%= data[i].FILENAME %>">備審連結</a>
+                    </div>
+                </div>            
+            </div>        
+        <% } %>
+    </div>
+</section>
+<!-- // 書審分享區(管理者 -->

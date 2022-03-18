@@ -1,0 +1,35 @@
+<!-- 新增解題form -->
+<link rel="stylesheet" href="/css/solution_formFields.css">
+<div class="form-group">
+  <label for="title">問題標題:</label>
+  <input required type="text" name="title" id="title" class="form-control">
+</div>
+<div class="form-group">
+  <label for="author">您的暱稱:</label>
+  <input type="text" name = "author" id="author" >
+</div>
+<div class="form-group">
+  <label for="subject">科目類別:</label>
+  <span class="value"> 
+    <select name="subject">
+      <option value="國文">國文</option>
+      <option value="英文">英文</option>
+      <option value="微積分">微積分</option>
+      <option value="普物">普物</option>
+      <option value="化學">化學</option>
+      <option value="計概">計概</option>
+      <option value="生物">生物</option>
+      <option value="經濟">經濟</option>
+      <option value="法律">法律</option>
+    </select>
+  </span>
+</div>
+<div class="form-group"></div>
+  <label for="question">問題</label>
+  <textarea name="question" id="question" class="form-control"></textarea>
+</div><br>
+<label>上傳圖片:&nbsp;&nbsp;<input type="file" name="file"></label><br><br>
+<!-- 上傳或取消 -->
+<button type="submit" class="btn btn-primary">上傳</button>
+<a href="/solution" class="btn btn-secondary">取消</a>
+<!-- // 新增解題form -->
